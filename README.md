@@ -1,29 +1,39 @@
-ansible-role-template
+ansible-role-tailscale
 =========
 
 <p align="center">
 
-<a href="https://github.com/iancleary/ansible-role-template/actions?query=workflow%3Aci" target="_blank">
-    <img src="https://github.com/iancleary/ansible-role-template/workflows/CI/badge.svg" alt="CI workflow status">
+<a href="https://github.com/iancleary/ansible-role-tailscale/actions?query=workflow%3Aci" target="_blank">
+    <img src="https://github.com/iancleary/ansible-role-tailscale/workflows/CI/badge.svg" alt="CI workflow status">
 </a>
 
-<a href="https://github.com/iancleary/ansible-role-template/actions?query=workflow%3Arelease" target="_blank">
-    <img src="https://github.com/iancleary/ansible-role-template/workflows/Release/badge.svg" alt="Release workflow status">
+<a href="https://github.com/iancleary/ansible-role-tailscale/actions?query=workflow%3Arelease" target="_blank">
+    <img src="https://github.com/iancleary/ansible-role-tailscale/workflows/Release/badge.svg" alt="Release workflow status">
 </a>
-<a href="https://galaxy.ansible.com/iancleary/template" target="_blank">
-    <img src="https://img.shields.io/badge/ansible--galaxy-iancleary.template-blue.svg" alt="Ansible Galaxy">
+<a href="https://galaxy.ansible.com/iancleary/tailscale" target="_blank">
+    <img src="https://img.shields.io/badge/ansible--galaxy-iancleary.tailscale-blue.svg" alt="Ansible Galaxy">
 </a>
-<a href="https://raw.githubusercontent.com/iancleary/ansible-role-template/main/LICENSE" target="_blank">
+<a href="https://raw.githubusercontent.com/iancleary/ansible-role-tailscale/main/LICENSE" target="_blank">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
 </a>
 </p>
 
-This role installs `add description here`.
+This role installs [Tailscale (A secure network that just works)](https://tailscale.com/download/linux), but **does not connect it to your tailscale network**!
+
+>After using this role, connect your machine to Tailscale.
+>
+>Login directly via ssh
+>Connect your machine to your Tailscale network and authenticate in your browser:
+>
+>`sudo tailscale up`
+>
+>You’re connected! You can find your Tailscale IPv4 address by running:
+>
+>`tailscale ip -4`
+
 
 Requirements
 ------------
-
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here.
 
 Supported and Tested `ansible_os_families`:
 
@@ -35,17 +45,11 @@ Supported and Tested `ansible_os_families`:
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+There are no role variables used.
 
-```yaml
----
-add variables here
-```
 
 Dependencies
 ------------
-
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
 
 N/A
 
@@ -58,7 +62,7 @@ Including an example of how to use your role (for instance, with variables passe
 - hosts: servers
   user: unprivelaged
   roles:
-    - role: iancleary.template
+    - role: iancleary.tailscale
       become: true
 ```
 
@@ -66,7 +70,7 @@ Including an example of how to use your role (for instance, with variables passe
 - hosts: servers
   user: root
   roles:
-    - role: iancleary.template
+    - role: iancleary.tailscale
 ```
 
 License
