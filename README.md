@@ -18,7 +18,7 @@ ansible-role-tailscale
 </a>
 </p>
 
-This role installs [Tailscale (A secure network that just works)](https://tailscale.com/download/linux), but **does not connect it to your tailscale network**!
+This role installs [Tailscale (A secure network that just works)](https://tailscale.com/download/linux), but **does not connect it to your Tailscale network**!
 
 >After using this role, connect your machine to Tailscale.
 >
