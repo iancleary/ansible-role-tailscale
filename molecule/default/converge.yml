@@ -1,0 +1,17 @@
+---
+- name: Converge
+  hosts: all
+
+  pre_tasks:
+    - name: Update apt cache. (Deb)
+      ansible.builtin.apt: update_cache=yes cache_valid_time=600
+      when: ansible_os_family == 'Debian'
+      changed_when: false
+
+    - name: Set defaults for testing only
+      ansible.builtin.set_fact:
+        variables: if_needed_only
+
+  roles:
+    - role: iancleary.template
+      variable: add_them_here
