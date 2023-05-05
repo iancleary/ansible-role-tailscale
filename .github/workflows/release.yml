@@ -13,7 +13,7 @@ name: Release
 
 defaults:
   run:
-    working-directory: 'iancleary.template'
+    working-directory: 'iancleary.tailscale'
 
 jobs:
 
@@ -24,7 +24,7 @@ jobs:
       - name: Check out the codebase.
         uses: actions/checkout@v2
         with:
-          path: 'iancleary.template'
+          path: 'iancleary.tailscale'
 
       - name: Set up Python 3.
         uses: actions/setup-python@v2
