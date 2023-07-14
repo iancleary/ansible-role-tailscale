@@ -1,4 +1,4 @@
-ARCHIVED 
+ARCHIVED
 
 ansible-role-tailscale
 =========
